@@ -1,4 +1,18 @@
 
+// Share content to other social media start
+let tweetMe = document.getElementById('tweet');
+
+let content = document.getElementById('tweet-content');
+
+const tweetNow = () =>{
+  // console.log("Welcome To the twitter");
+  const tweetPost = `https://twitter.com/intent/tweet?text=${content.innerText}`;
+  window.open(tweetPost);
+}
+
+tweetMe.addEventListener('click', tweetNow);
+
+// Share content to other social media end
 // Post Joke Saving Page Start 
 let submitPost = document.getElementById('postsub-btn');
 // let submitPost = document.getElementById('submit-form');

@@ -23,15 +23,15 @@
 </head>
 <body>
       <!-- Navigation Bar -->
-    <header id="navbar" class="header">
+      <header id="navbar" class="header">
         <div class="nav-container">
             <div class="nav-logo">
-              <a href="index.html" ><img src="./images/site-images/logo png.png"  alt="image"></a>
+            <a href="home.php" ><img src="./images/site-images/logo png.png"  alt="image"></a>
             </div>
 
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="index.html" >Home</a>
+                    <a href="home.php" >Home</a>
                 </li>
                 <li class="nav-item">
                   <div class="dropdown">
@@ -53,22 +53,30 @@
                   </div>                
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" >About</a>
+                    <a href="#about" >About</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contactus" >Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./login and signup.html" >Account</a>
-                </li>
+                  <div class="dropdown">
+                    <button class="dropbtn">Account
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="userProfile.php">Profile</a>
+                      <a href="index.php" >LogOut</a>
+                    </div>
+                  </div>
             </ul>
         </div>
     </header>
 
 
+
     <!-- Post Joke Section Form Start -->
 
-    <div class="joke-form">
+    <form method="POST" action="post_joke.php" class="joke-form">
         <div class="joke-heading">
            <h1>Post Your Own Jokes</h1>
         </div>
@@ -77,15 +85,16 @@
               <tr class="input">
                <span>
                 <td><label for="name">Name:</label></td>
-                <td><span><input type="name" id="post-name" placeholder="Enter Your Name"><br><small id="user-name-msg"></small></span></td>
+                <td><span><input type="name" name="username" id="post-name" placeholder="Enter Your Name"><br><small id="user-name-msg"></small></span></td>
                 
                </span>
               </tr>
+
               <tr class="input">
                 <td><label for="category">Category:</label></td>
                 <td>
                   <span>
-                    <select id="post-category">
+                    <select name="category" id="post-category">
                       <option value = "">Choose Category
                       </option>
                     <option value = "funny-jokes">Funny Jokes
@@ -116,14 +125,14 @@
               </tr>
              <tr class="input">
               <td><label for="text">Joke Content:</label></td>
-              <td><span><textarea name="text" id="post-content" cols="40" rows="3" required></textarea><br><small id="post-content-msg"></small></span></td>
+              <td><span><textarea name="jokes" id="post-content" cols="40" rows="3" required></textarea><br><small id="post-content-msg"></small></span></td>
              </tr>
           </table>  
             <div class="btn">
-              <button class="post-btn" id="postsub-btn">Post</button>
+              <button class="post-btn" name="submit" id="postsub-bt">Post</button>
             </div>
         </div>
-    </div>
+      </form>
 
     <!-- Post Publish Section  -->
     <section id="joke-section" style="padding-top: 120px;">
