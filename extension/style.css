@@ -79,3 +79,26 @@ h4{
     background-color: orange;
     cursor: pointer;
 }
+
+/* Share Content  */
+
+#share-content{
+    margin-top: 10px;
+  }
+
+#share-content p{
+  font-size: 17px;
+  color: #0000FF;
+  font-weight: bold;
+}
+#share-content #tweet{
+  font-size: 25px;
+  color: #00acee;
+}
+
+#share-content #tweet:hover{
+  color: rgb(255, 115, 0);
+  cursor: pointer;
+}
+
+  /* Share Content End */

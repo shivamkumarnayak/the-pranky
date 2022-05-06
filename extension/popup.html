@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- CSS File  -->
     <link rel="stylesheet" href="style.css">
     <title>Jokes</title>
 </head>
 <body>
+   <center>
     <div class="logo">
         <img src="./images/logo png.png" width="200px"alt="logo">
     </div>
@@ -17,10 +23,21 @@
     <div class="refresh-btn">
         <button id="refresh-btn" class="ref-btn" onclick="refresh()">Change Joke</button>
     </div>
+   </center>
+      <center>
+        <div id="share-content">
+            <span>
+            <p>Share Jokes On:</p>
+            <button id="tweet"><i class='bx bxl-twitter'></i></button>
+            </span>
+        </div>
+      </center>
+   <center>
     <div id="link-site">
         <p>Want to see more jokes?</p>
        <button id="btn" onclick="htmlFile()" class="btn"><a href="http://www.google.com" target="_blank">Go to The Pranky</a></button>
     </div>
+   </center>
 </body>
 <script src="popup.js"></script>
 </html>
